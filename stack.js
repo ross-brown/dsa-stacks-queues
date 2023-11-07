@@ -25,16 +25,16 @@ class Stack {
     this.top = newNode;
     newNode.next = top;
 
-    this.size+=1;
+    this.size += 1;
   }
 
   /** pop(): remove the node from the top of the stack
    * and return its value. Should throw an error if the stack is empty. */
 
   pop() {
-    if(this.isEmpty()) throw new Error("Stack is empty");
+    if (this.isEmpty()) throw new Error("Stack is empty");
 
-    const top = this.top
+    const top = this.top;
     this.top = this.top.next;
     this.size -= 1;
 
@@ -44,8 +44,7 @@ class Stack {
   /** peek(): return the value of the top node in the stack. */
 
   peek() {
-
-    return this.top.val;
+    return this.top?.val;
   }
 
   /** isEmpty(): return true if the stack is empty, otherwise false */
